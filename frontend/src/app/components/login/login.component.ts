@@ -41,20 +41,6 @@ export class LoginComponent implements OnInit {
     );
   }
 
-// login with DRF
-  LoginUser(){
-    this.authService.loginUser(this.login).subscribe( response => {
-      console.log(response)
-      alert('User ' + this.signin.username + ' has logged in'),
-      // this.loggedIn.next(true);
-      this.router.navigate(['main'])
-    },
-    error => {
-      // this.error = error
-      alert('Invalid User Credentials');
-      console.log('error',error)
-    }
-    );
-  }
+
 }
 

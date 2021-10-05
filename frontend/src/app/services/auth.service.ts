@@ -42,12 +42,7 @@ export class AuthService {
     );
   }
 
-  // login with DRF
-  authUrl = 'http://localhost:8000/api/';
 
-  loginUser(loginData:any):Observable<any[]>{
-    return this.http.post<any[]>(this.authUrl + 'login/', loginData)
-  }
 
   signup(username: string, email: string, password1: string, password2: string) {
     return this.http.post(
